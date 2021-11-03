@@ -60,7 +60,7 @@
          <div class="container">
          
          <h1 class="slogan slogan-location">Эффективные решения для вашего бизнеса</h1>
-         <button class="index-btn btn" type="button">Заказать услугу</button>
+         <button class="index-btn btn" data-modal-open type="button">Заказать услугу</button>
     </div>
      </section>
      <section class="section">
@@ -413,11 +413,19 @@
             </div>
         </div>
         </footer>
-        <div class="backdrop">
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                
+                <button  type="button" class="modal-btn" data-modal-close>
+                    <svg class="modal-close-icon" width="18" height="18">
+                        <use href="./images/sprite.svg#icon-cross">
+                        </use>
+                    </svg>
+                </button>
+
             </div>
         </div>
- </main>
+         </main>
+<script>src = ".js/modal.js"</script>
 </body>
+
 </html>
