@@ -33,6 +33,7 @@ body {
   color: var(--first-text-color);
 }
 address {
+  margin-top: 20px;
   font-style: normal;
 }
 
@@ -125,6 +126,7 @@ header {
 .contacts-icon {
   fill: var(--second-text-color);
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list {
@@ -299,8 +301,10 @@ header {
   color: var(--third-text-color);
   background-color: rgba(47, 48, 58, 0.8);
   width: 100%;
-
-  padding: 23px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .team-list {
   display: flex;
@@ -385,7 +389,7 @@ header {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.footer-between-item:not(:last-chaild) {
+.footer-between-item {
   margin-bottom: 9px;
 }
 .portfolio-project-name {
@@ -424,13 +428,15 @@ header {
   margin-right: 8px;
 }
 .filtr-btn {
-  height: 38px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   background: F5F4FA;
   border-radius: 4px;
   padding-left: 22px;
   padding-right: 22px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filtr-btn:hover,
 .filtr-btn:focus {
@@ -588,7 +594,7 @@ header {
   top: 0;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transform: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -607,7 +613,6 @@ header {
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn {
@@ -622,6 +627,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .backdrop.is-hidden {
   visibility: hidden;
